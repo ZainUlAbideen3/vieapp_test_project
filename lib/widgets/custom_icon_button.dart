@@ -6,19 +6,20 @@ import 'package:vie_app_project/resources/images_path.dart';
 import 'package:vie_app_project/widgets/custom_text.dart';
 
 class IconTextContainer extends StatelessWidget {
-  // final String text;
-  // final String svgPath;
+   final double fontSize;
+   final String clockSvgPath;
+   final String fireSvgPath;
   const IconTextContainer({
-    super.key,
+    super.key, this.fontSize = 5.7 , this.clockSvgPath = AppImages.clock,this.fireSvgPath = AppImages.fireUnfilled,
   });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        buildIconTextContainer(text: "20min", svgPath: AppImages.clockFilled),
-        Gap(10),
-        buildIconTextContainer(text: "20cal", svgPath: AppImages.fire),
+        buildIconTextContainer(text: "20min", svgPath: clockSvgPath),
+        const Gap(5),
+        buildIconTextContainer(text: "20cal", svgPath: fireSvgPath),
       ],
     );
   }
@@ -26,7 +27,7 @@ class IconTextContainer extends StatelessWidget {
   Widget buildIconTextContainer(
       {required String text, required String svgPath}) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4.5),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4.5),
       decoration: BoxDecoration(
         color: AppColors.primaryColor,
         borderRadius: BorderRadius.circular(4),
@@ -35,10 +36,10 @@ class IconTextContainer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(svgPath),
-          Gap(5),
+          const Gap(5),
           CustomText(
             text,
-            fontSize: 10,
+            fontSize: fontSize,
             fontWeight: FontWeight.w700,
           ),
         ],

@@ -20,10 +20,12 @@ class _CustomSearchBarState extends State<CustomSearchBar> {
   Widget build(BuildContext context) {
     final inputBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(30),
+      borderSide: BorderSide.none
     );
     return TextField(
       controller: widget.controller,
       keyboardType: TextInputType.text,
+      cursorWidth: 1,
       decoration: InputDecoration(
         border: inputBorder,
         enabledBorder: inputBorder,

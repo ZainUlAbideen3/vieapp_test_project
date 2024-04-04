@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'custom_text.dart';
 
 class CustomTitleAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -15,7 +14,7 @@ class CustomTitleAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leadingWidth: 90,
+      leadingWidth: 85,
       surfaceTintColor: Colors.transparent,
       leading: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
@@ -39,7 +38,7 @@ class CustomTitleAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
       ),
-      centerTitle: true,
+      centerTitle: false,
     );
   }
 
