@@ -13,7 +13,7 @@ class CustomText extends StatelessWidget {
 
   const CustomText(this.text,
       {super.key,
-      this.fontFamily = "Merriweather",
+      this.fontFamily = "Inter",
       this.textAlign = TextAlign.left,
       this.fontSize = 14,
       this.fontWeight = FontWeight.normal,
